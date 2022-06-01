@@ -8,26 +8,26 @@
 struct __locale_map;
 
 struct __locale_struct {
-	const struct __locale_map *cat[6];
+    const struct __locale_map* cat[6];
 };
 
 struct tls_module {
-	struct tls_module *next;
-	void *image;
-	size_t len, size, align, offset;
+    struct tls_module* next;
+    void* image;
+    size_t len, size, align, offset;
 };
 
 struct __libc {
-	char can_do_threads;
-	char threaded;
-	char secure;
-	volatile signed char need_locks;
-	int threads_minus_1;
-	size_t *auxv;
-	struct tls_module *tls_head;
-	size_t tls_size, tls_align, tls_cnt;
-	size_t page_size;
-	struct __locale_struct global_locale;
+    char can_do_threads;
+    char threaded;
+    char secure;
+    volatile signed char need_locks;
+    int threads_minus_1;
+    size_t* auxv;
+    struct tls_module* tls_head;
+    size_t tls_size, tls_align, tls_cnt;
+    size_t page_size;
+    struct __locale_struct global_locale;
 };
 
 extern struct __libc __libc;

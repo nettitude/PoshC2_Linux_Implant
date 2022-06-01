@@ -1,5 +1,12 @@
 #!/bin/bash
 
+sudo apt install gcc-multilib
+
+export MUSL_VER=1.2.1
+export UZLIB_VER=2.9.4
+export MBED_VER=2.23.0
+export LIBCURL_VER=7.71.1
+
 set -u
 set -e
 
@@ -105,7 +112,7 @@ popd > /dev/null
 
 export LIB_DIR=$COMP_DIR/lib/
 
-pushd ./Linux/src/ > /dev/null
+pushd ./src/ > /dev/null
 
 export OUTPUT_DIR=$COMP_DIR/linux_implant/
 
