@@ -1,3 +1,6 @@
 downloads/
 bin/
 lib/
+tmp/
+linux_implant/
+src/*.o
